@@ -1,0 +1,33 @@
+.library{
+    flex:0.8;
+    background-color: #f9f9f9;
+    padding: 40 px 20 px;
+    padding-bottom:0 ;
+}
+.library > h2{
+    margin-left: 5px;
+    margin-bottom: 20px;
+    Font-Family: 'Work Sans', Sans-Serif;
+    Font-Size: 30px;
+    color:gray;
+    padding-left: 15px;
+    padding-top: 5px;
+    
+}
+
+.library__videos{
+    display: flex;
+    flex-wrap: wrap;
+    Font-Family: 'Work Sans', Sans-Serif;
+    Font-Size: 15px;
+    text-align: center;
+    color: gray;
+    /* padding-left: 5px; */
+    
+
+}
+
+/* Font-Family: 'Work Sans', Sans-Serif;
+Font-Size: 45px;
+Font-Family: 'Open Sans', Sans-Serif;
+Font-Size: 15px; */

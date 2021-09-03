@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -24,7 +25,12 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 
-// Serve static files
+//ROUTES FOR SOLO *****
+const videoRouter = require('./routes/video.router'); 
+app.use('/video', videoRouter)
+
+
+
 app.use(express.static('build'));
 
 // App Set //
