@@ -17,10 +17,11 @@ body {
 
 div#container {
   max-width: 1200px;
-
- 
-  margin: 0 auto;
-  padding: 16px 120px;
+  /* margin: 0 auto; */
+  padding:auto;
+margin:auto;
+text-align:center;
+  /* padding: 16px 120px; */
 }
 
 nav {
@@ -57,6 +58,10 @@ nav > img {
   display: flex;
   width: 100%;
 }
+
+
+
+
 
 .pill {
   background-color: #eeeeee;

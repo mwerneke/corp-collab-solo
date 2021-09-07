@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
+import './LoginForm.css';
+import Logo from '../Logo.png'
 
-function LoginForm() {
+function LoginForm(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const errors = useSelector(store => store.errors);
@@ -25,7 +27,15 @@ function LoginForm() {
   }; // end login
 
   return (
+    <>
+    <img
+          className="form__logo"
+          src={Logo} alt=""/>
+    
     <form className="formPanel" onSubmit={login}>
+      
+      <div className="form">
+      
       <h2>Login</h2>
       {errors.loginMessage && (
         <h3 className="alert" role="alert">
@@ -46,7 +56,7 @@ function LoginForm() {
       </div>
       <div>
         <label htmlFor="password">
-          Password:
+          Password:  
           <input
             type="password"
             name="password"
@@ -59,7 +69,9 @@ function LoginForm() {
       <div>
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>
+      </div>
     </form>
+    </>
   );
 }
 

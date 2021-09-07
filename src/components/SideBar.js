@@ -21,10 +21,10 @@ function SideBar() {
         history.push('/addtolibrary')
     }
     const addRequest =() =>{
-        history.push('/addRequest')
+        history.push('/addRequests')
     }
     const openRequest=() =>{
-        history.push('/openrequest')
+        history.push('/openrequests')
     }
 
     return (

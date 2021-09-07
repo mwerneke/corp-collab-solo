@@ -5,9 +5,13 @@ import './Header.css';
 import Logo from './Logo.png'
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
+import {useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux';
 
-function Header() {
+function Header(props) {
   const history = useHistory();
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store.user);
   
   const search=()=>{
     history.push('/library')
@@ -29,9 +33,20 @@ function Header() {
       </div>
       <div className="header__right">
         <div className="header__rightIcon">
-          <Button>
+          {/* <Button>
           <DuoSharpIcon />
-          </Button>
+          </Button> */}
+          <div className="stack">
+            {
+              user ?
+          <h2> {user.username}</h2>
+          :
+          <h3>No user logged-in</h3>
+            }
+          <Button className={props.className}
+      onClick={() => dispatch({ type: 'LOGOUT' })}
+    >Log Out</Button>
+    </div>
         </div>
       </div>
     </div>

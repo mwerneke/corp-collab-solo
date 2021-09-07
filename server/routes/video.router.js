@@ -2,17 +2,18 @@ const express = require("express");
 const pool = require("../modules/pool");
 const router = express.Router();
 
+
 router.post('/', (req, res) => {   //MW****
-    console.log(req.body);
+    console.log(req.body, 'POST LOG');
     // RETURNING "id" will give us back the id of the created video
     const insertVideoQuery = `
     INSERT INTO "solo" ("key")
-    VALUES ($1)
-    RETURNING "id";`
+    VALUES ($1);`
+    // RETURNING "id";`
     // Makes Video
     pool.query(insertVideoQuery, [req.body.key])
     .then(result => {
-      console.log('New Video Id:', result.rows[0].id); //ID IS HERE!
+      // console.log('New Video Id:', result.rows[0].id); //ID IS HERE!
     }).catch(err => {
       console.log(err);
       res.sendStatus(500)

@@ -1,0 +1,51 @@
+.addRequests {
+
+        width: 60%;
+        padding: 12px 20px;
+        margin: auto;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+
+
+
+
+  /* text-align: center;
+  background-color: rgb(217, 237, 247);
+
+  margin: auto;
+  width: 50%;
+  border: 1px solid rgb(143, 182, 240);
+  padding-left: 10px; */
+
+
+/* .question {
+  margin: 10px;
+  text-align: center;
+}
+
+.deptdropdown {
+  margin: 10px;
+  text-align: center;
+}
+
+.priorityDropdown {
+  margin: 10px;
+  text-align: center;
+}
+.cancel {
+  margin-top: 5px;
+  margin: 15px;
+}
+.add {
+  margin: 15px;
+}
+.return {
+  margin: 15px;
+}
+.dropdown {
+  margin: 10px;
+} */

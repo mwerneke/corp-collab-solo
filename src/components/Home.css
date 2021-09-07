@@ -1,0 +1,28 @@
+.home__Icon{
+   
+    transform: scale(4);
+    
+    margin-left: 200px;
+    margin-top: 45px;
+    
+    
+}
+
+.title{
+    padding-left: 90px;
+    padding-top: 45px;
+}
+
+.home__Icon:hover{
+    background-color: rgb(72, 209, 118);
+    cursor:pointer;
+}
+.subtitle{
+    padding-left: 100px;
+    padding-top: 45px;
+}
+.home{
+    display: flex;
+
+}
+   

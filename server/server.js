@@ -27,14 +27,16 @@ app.use('/api/user', userRouter);
 
 //ROUTES FOR SOLO *****
 const videoRouter = require('./routes/video.router'); 
-app.use('/video', videoRouter)
+app.use('/api/video', videoRouter)
 
+const ticketRouter = require('./routes/ticket.router');   
+app.use('/api/ticket', ticketRouter)
 
 
 app.use(express.static('build'));
 
 // App Set //
-const PORT = process.env.PORT || 5000;
+
 
 /** Listen * */
 app.listen(PORT, () => {

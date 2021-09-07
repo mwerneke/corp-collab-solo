@@ -1,0 +1,26 @@
+.form{
+    /* display:inline-block; */
+    text-align: center;
+    background-color: rgb(181, 212, 228);
+   
+margin: auto;
+  width: 50%;
+  border: 3px solid rgb(143, 182, 240);
+  padding-left: 10px;
+}
+
+.formPanel{
+    padding-top: 10px;
+    margin: auto;    
+    align-self: center;
+}
+    .form__logo {
+        height: 68px;
+        text-align: center;
+        display:flex;
+        margin: auto;
+        align-self: center;
+        
+        padding-left: 10px;
+    
+    }

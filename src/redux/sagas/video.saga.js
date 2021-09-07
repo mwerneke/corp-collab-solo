@@ -1,10 +1,11 @@
 import axios from "axios"
-import {takeLatest} from 'redux-saga/effects'
+import {takeLatest, put} from 'redux-saga/effects'
 
 
 function* postVideo(action) {   
     try {
-      const response = yield axios.post("/video", action.payload); //server.js express route 
+      console.log(action, 'MICHAELMICHAEL');
+      const response = yield axios.post("/api/video", {key:action.payload}); //server.js express route 
       console.log(response.data);
       yield put({
         type: "FETCH_VIDEOS",

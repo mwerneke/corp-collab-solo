@@ -56,7 +56,7 @@ const Example = () => {
       
      dispatch({   //**ADDED */
        type: 'POST_VIDEO',
-       payload: {key}
+       payload: key
      })   
       
     
@@ -65,12 +65,14 @@ const Example = () => {
   }
 
   return (
+    
     <div id="container">
+       <tr className="tablerow">ttfffffffffffff</tr>
       {/* <Navbar /> */}
       <h2 className="title">Video Fulfillment</h2>
       <div className="wrapper">
         <div className="pills">
-          <Pill title="Status" value={status} />
+          <Pill style={{backgroundColor: status === 'recording'?'green':'inherit' }} title="Status" value={status} />
           <Pill
             style={{ flexGrow: 1 }}
             title="Blob URL"
@@ -80,6 +82,7 @@ const Example = () => {
 
         <div>
           <video 
+          style={{width:'100%'}}
             ref={videoRef}
             src={blobUrl}
             // poster={process.env.PUBLIC_URL + "/poster.png"}

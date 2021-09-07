@@ -1,16 +1,36 @@
-.library{
-    flex:0.8;
-    background-color: #f9f9f9;
-    padding: 40 px 20 px;
-    padding-bottom:0 ;
-}
-.openrequests > h2{
-    margin-left: 5px;
-    margin-bottom: 20px;
+#customers {
     Font-Family: 'Work Sans', Sans-Serif;
-    Font-Size: 30px;
-    color:gray;
-    padding-left: 15px;
-    padding-top: 5px;
+    border-collapse: collapse;
+    width: 75%;
+    height: 10px;
+    padding-left:20px;
+    text-align: center;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 3px;
     
-}
+    
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: rgb(119, 235, 11);}
+  
+  #customers th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #60afdd;
+    color: white;
+    height:15px;
+    
+  }
+  .Btn{
+      display:inline-block;
+      font-size: 10px;
+      margin:auto;
+      text-align: center;
+  }
+  
