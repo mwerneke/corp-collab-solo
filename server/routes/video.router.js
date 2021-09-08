@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.post('/', (req, res) => {   //MW****
-    console.log(req.body, 'POST LOG ff');
+    console.log(req.body, 'POST LOG ');
     // RETURNING "id" will give us back the id of the created video
     const insertVideoQuery = `
     INSERT INTO "solo" ("key")

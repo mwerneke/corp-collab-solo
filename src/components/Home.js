@@ -21,7 +21,9 @@ function Home() {
             
             <AddIcon onClick={handleClick} className="home__Icon" />
             
-            <h4 className="subtitle">What do you need help with?</h4>
+            <h4 className="subtitle">Click the '+' and begin the process</h4>
+
+            
 
 
         </div>

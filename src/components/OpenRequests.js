@@ -54,7 +54,7 @@ function OpenRequests() {
                                 <td>{item.question}</td>
                                 <td>{item.department}</td>
                                 <td>{item.priority}</td>
-                                <button onClick={event => seeTicket(item.id)} alt={item.question} alt={item.department} className="Btn" >Select</button>
+                                <td><button onClick={event => seeTicket(item.id)} alt={item.question} alt={item.department} className="Btn" >Select</button></td>
                             </tr>
 
                     );

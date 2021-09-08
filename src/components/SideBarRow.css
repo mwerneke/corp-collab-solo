@@ -13,16 +13,16 @@
 .sidebarRow__title{
     flex:1;
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500px;
     color: gray;
 }
 .sidebarRow:hover{
-    background-color: rgb(216, 223, 240);
+    background-color: rgb(190, 224, 243);
     cursor:pointer;
 }
 .sidebarRow:hover > .sidebarRow__icon{
-    color:rgb(45, 48, 247);
+    color:rgb(16, 94, 240);
 }
 .sidebarRow:hover > .sidebarRow__title{
     font-weight: bold;

@@ -22,8 +22,9 @@ useEffect(() => {
             <div className="library__videos">
            {video && video.map(video => {
                return <VideoCard key={video.key} video={"https://corp-collab.s3.us-east-2.amazonaws.com/"+video.key} 
-        //    title={video.title}
+           
            />})}
+           
 
             </div>
         </div>

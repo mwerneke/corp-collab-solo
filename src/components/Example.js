@@ -14,6 +14,7 @@ import { useHistory } from 'react-router-dom';
 
 const Example = () => {
   const dispatch = useDispatch(); //**Added */
+  const ticketDetailReducer = useSelector((store) => store.ticketDetailReducer);
   // const ticketDetailReducer = useSelector((store) => store.ticketDetailReducer); //TESTING
   const history = useHistory();
   const {
@@ -33,8 +34,9 @@ const Example = () => {
     saveAs(blobUrl, "video.webm");
   }
 
-  const handleUpload = async () => {
+  const handleUpload = async (details) => {
     const key = `${nanoid()}.webm`
+    
     // const title = `${FetchDetail()}` //TESTING
     const { data } = await axios.post('http://localhost:5522/api/storage/presignedUrl', {
       key,
@@ -55,13 +57,15 @@ const Example = () => {
       },
     })
 
-    alert(`Upload done! ${key}`)
+    alert(`Your upload is complete. ${key}`)
 
     //NEED TO ACTIVATE ON UPLOAD
 
     dispatch({   //**ADDED */
       type: 'POST_VIDEO',
       payload: key
+        
+       
     })
     history.push('/library')
 
@@ -70,14 +74,29 @@ const Example = () => {
 
 
 
-
+//add back <FetchDetail/> remove store
 
 return (
 
   <div id="container">
-    <FetchDetail />
+    {/* <FetchDetail /> */} 
     {/* <Navbar /> */}
+    {ticketDetailReducer && ticketDetailReducer.map(item => {
+                return (
+                    <tr key={item.id}>
+                        <div>
+                            <h4 className="question">Tutorial Request: {item.question}</h4>
+                        
+                        </div>
+                        <div>
+                            <h4 className="department">Department: {item.department}</h4>
+                     
+                        </div>
+                       
+                    </tr>
 
+                );
+            })}
     <div className="wrapper">
       <div className="pills">
         <Pill style={{ backgroundColor: status === 'recording' ? 'red' : 'inherit' }} title="Status" value={status} />
