@@ -1,33 +1,25 @@
-.home{
-    flex:.8;
-    padding-left:150px;
-    
-    
-}
-   
-
-
-.home__Icon{
-   
-    transform: scale(3);
-    
-    margin-left: 200px;
-    margin-top: 45px;
-    
-    
+.home {
+  flex: 0.8;
+  padding-left: 150px;
 }
 
-.title{
-    align-items: center;
-    padding-left: 90px;
-    padding-top: 45px;
+.home__Icon {
+  transform: scale(3);
+  margin-left: 200px;
+  margin-top: 45px;
 }
 
-.home__Icon:hover{
-    background-color: rgb(72, 209, 118);
-    cursor:pointer;
+.title {
+  align-items: center;
+  padding-left: 90px;
+  padding-top: 45px;
 }
-.subtitle{
-    padding-left: 100px;
-    padding-top: 45px;
+
+.home__Icon:hover {
+  background-color: rgb(72, 209, 118);
+  cursor: pointer;
+}
+.subtitle {
+  padding-left: 100px;
+  padding-top: 45px;
 }

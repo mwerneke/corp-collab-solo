@@ -7,8 +7,10 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux';
+import {useState} from 'react';
 
 function Header(props) {
+  const [inputSearch, setInputSearch] =useState();
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
@@ -26,7 +28,7 @@ function Header(props) {
           src={Logo} alt="" />
       </div>
       <div className="header__input">
-        <input placeholder="  How to..." type="text" />
+        <input onChange ={e => setInputSearch(e.target.value)} value ={inputSearch} placeholder="  How to..." type="text" />
         <Button onClick={search}>
         <SearchSharpIcon className="header__inputBtn" />
         </Button>
