@@ -3,6 +3,7 @@ import Header from "../Header";
 import SideBar from '../SideBar';
 import Library from '../Library';
 import OpenRequests from '../OpenRequests';
+// import FetchTicket from '../FetchTicket.jsx';
 import Example from '../Example';
 import Footer from '../Footer';
 import AddRequests from '../AddRequests';
@@ -121,6 +122,7 @@ function App() {
             <Header/>
             <div className="app__page">
             <SideBar/>
+            {/* <FetchTicket/> */}
             <Example/>
             </div>
             

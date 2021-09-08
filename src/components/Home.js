@@ -14,7 +14,7 @@ function Home() {
     
     
     return (
-        <div container="home">
+        <div className="home">
 
 
             <h2 className="title">Make a Video Request</h2>

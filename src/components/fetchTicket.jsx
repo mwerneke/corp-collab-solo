@@ -1,21 +1,29 @@
-// import react from 'react'
+// import React from 'react'
 // import { useSelector } from "react-redux";
-// import OpenRequests from './OpenRequests';
+
+// function FetchTicket() {
 
 
-// function Details() {
-    
-//     const ticketReducer = useSelector(store => store.ticketReducer);
-    
+//     const ticketReducer = useSelector((store) => store.ticketReducer);
+
 //     return (
-//         <>
 //         <div>
-//             <br/>
-            
-//             {ticketReducer.map((item, i) => (<OpenRequests key = {i} item={item}/>)
-//             )}
+//             {ticketReducer && ticketReducer.map(item => {
+//                 return (
+//                     <tr key={item.id}>
+//                         <td>{item.question}</td>
+//                         <td>{item.department}</td>
+//                         <td>{item.priority}</td>
+                       
+//                     </tr>
+
+//                 );
+//             })}
 //         </div>
-//         </>
-//     );
+//     )
 // }
-// export default Details;
+
+// export default FetchTicket
+
+
+

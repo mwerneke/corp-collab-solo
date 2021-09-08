@@ -5,6 +5,8 @@
   padding: 0;
 }
 
+
+
 .title{
     display: flex;
     color:gray;
@@ -16,7 +18,8 @@ body {
 }
 
 div#container {
-  max-width: 1200px;
+  max-width: 500px;
+  flex:.8;
   /* margin: 0 auto; */
   padding:auto;
 margin:auto;

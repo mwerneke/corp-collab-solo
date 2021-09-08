@@ -1,7 +1,8 @@
 .sidebarRow{
     display: flex;
-    align-items: center;
-    padding: 10px 30px;
+     flex: .4; 
+    align-items: center; 
+     padding: 10px 30px; 
     Font-Family: 'Work Sans', Sans-Serif;
     Font-Size: 30px
 }
@@ -17,11 +18,11 @@
     color: gray;
 }
 .sidebarRow:hover{
-    background-color: lightgray;
+    background-color: rgb(216, 223, 240);
     cursor:pointer;
 }
 .sidebarRow:hover > .sidebarRow__icon{
-    color:rgb(121, 26, 26);
+    color:rgb(48, 121, 26);
 }
 .sidebarRow:hover > .sidebarRow__title{
     font-weight: bold;

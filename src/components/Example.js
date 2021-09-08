@@ -9,6 +9,7 @@ import axios from 'axios'
 import { nanoid } from "nanoid";
 import {useDispatch} from 'react-redux'  //**Added */
 
+
 const Example = () => {
   const dispatch = useDispatch(); //**Added */
   const {
@@ -67,7 +68,7 @@ const Example = () => {
   return (
     
     <div id="container">
-       <tr className="tablerow">ttfffffffffffff</tr>
+       
       {/* <Navbar /> */}
       <h2 className="title">Video Fulfillment</h2>
       <div className="wrapper">

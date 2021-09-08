@@ -4,7 +4,7 @@
 .sidebar > hr {
    height:1px;
    border: 0;
-   background-color: lightgray; 
+   background-color: rgb(238, 235, 235); 
    margin-top: 10px;
    margin-bottom: 10px;
 }

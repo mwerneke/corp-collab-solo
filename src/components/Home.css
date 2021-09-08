@@ -1,6 +1,15 @@
+.home{
+    flex:.8;
+    padding-left:150px;
+    
+    
+}
+   
+
+
 .home__Icon{
    
-    transform: scale(4);
+    transform: scale(3);
     
     margin-left: 200px;
     margin-top: 45px;
@@ -9,6 +18,7 @@
 }
 
 .title{
+    align-items: center;
     padding-left: 90px;
     padding-top: 45px;
 }
@@ -21,8 +31,3 @@
     padding-left: 100px;
     padding-top: 45px;
 }
-.home{
-    display: flex;
-
-}
-   

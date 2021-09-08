@@ -1,3 +1,7 @@
+.container{
+  flex:.8
+}
+
 #customers {
     Font-Family: 'Work Sans', Sans-Serif;
     border-collapse: collapse;
