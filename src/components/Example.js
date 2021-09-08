@@ -8,6 +8,7 @@ import {saveAs} from "file-saver";
 import axios from 'axios'
 import { nanoid } from "nanoid";
 import {useDispatch} from 'react-redux'  //**Added */
+import FetchDetail from "./FetchDetail";
 
 
 const Example = () => {
@@ -62,23 +63,23 @@ const Example = () => {
       
     
     
-    // TODO: Save key variable to database axios call to server then post to DB
+
   }
 
   return (
     
     <div id="container">
-       
+       <FetchDetail/>
       {/* <Navbar /> */}
-      <h2 className="title">Video Fulfillment</h2>
+      
       <div className="wrapper">
         <div className="pills">
           <Pill style={{backgroundColor: status === 'recording'?'red':'inherit' }} title="Status" value={status} />
-          <Pill
+          {/* <Pill
             style={{ flexGrow: 1 }}
             title="Blob URL"
             value={blobUrl || "Waiting..."}
-          />
+          /> */}
         </div>
 
         <div>

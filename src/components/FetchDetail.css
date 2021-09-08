@@ -1,0 +1,12 @@
+.question{
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.department{
+    font-size: 20;
+    text-align: left;
+}
+.all{
+    border: 1px black;
+}

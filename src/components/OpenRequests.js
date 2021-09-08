@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Library.css'
 import './OpenRequests.css';
 import { useHistory } from "react-router-dom";
@@ -6,8 +6,9 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
 
-function OpenRequests() {
 
+function OpenRequests() {
+    
     const ticketReducer = useSelector((store) => store.ticketReducer);
     console.log('LOG OF ticketReducer in Open Requests', ticketReducer, typeof ticketReducer)
     const dispatch = useDispatch();
@@ -18,16 +19,18 @@ function OpenRequests() {
             type: 'FETCH_TICKETS'
         });
     }, []);
+    
+    const seeTicket = (details) => {
+        
 
-    // const seeTicket = (details) => {
-    //     console.log('In See Ticket', details);
-    //     dispatch({
-    //         type: 'FETCH_TICKETS',
-    //         payload: details
-    //     })
+        console.log('In See Ticket', details );
+        dispatch({
+            type: 'TICKET_DETAIL',
+            payload: details
+        })
 
-    //     history.push('/addtolibrary')
-    // }
+        history.push('/addtolibrary')
+    }
 
 
 
@@ -51,7 +54,7 @@ function OpenRequests() {
                                 <td>{item.question}</td>
                                 <td>{item.department}</td>
                                 <td>{item.priority}</td>
-                                <button className="Btn" >Select</button>
+                                <button onClick={event => seeTicket(item.id)} alt={item.question} alt={item.department} className="Btn" >Select</button>
                             </tr>
 
                     );

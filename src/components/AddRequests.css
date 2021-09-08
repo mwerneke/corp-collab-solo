@@ -6,7 +6,7 @@
         display: inline-block;
         border: 1px solid #ccc;
         border-radius: 4px; 
-        font-size: 25px;
+        font-size: 20px;
         
         box-sizing: border-box;
         text-align: center;
@@ -15,6 +15,11 @@
 
       .frm{
         Font-Family: 'Work Sans', Sans-Serif;
+      }
+      .question{
+        font-size: 18px;
+        Font-Family: 'Work Sans', Sans-Serif;
+        width: 400px;
       }
       
      

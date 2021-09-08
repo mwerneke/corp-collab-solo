@@ -62,7 +62,7 @@ function AddRequests() {
         <div className="addRequests">
             <form name="frm" onSubmit={postTicket}>
                 <h5>Tutorial Request</h5>
-                <textarea rows='5' font-size='16px' className="question" onChange={handleQuestion} />
+                <textarea rows='5' font-size='5px' className="question" onChange={handleQuestion} />
                 <br />
                 <h5>Department</h5>
                 <select className="deptDropdown" placeholder="Departments" onChange={handleDept}>
@@ -89,7 +89,7 @@ function AddRequests() {
                 <br />
                 <br />
                 
-                <Button variant="contained" color="primary" className="add" type="submit">Add Ticket</Button>
+                <Button variant="contained" color="primary" className="add" type="submit">Add a Ticket</Button>
                 {/* <button onClick={handleBackBtn}/> */}
             </form>
             <br />

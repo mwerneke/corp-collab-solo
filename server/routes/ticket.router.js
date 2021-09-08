@@ -29,7 +29,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {   //MW****
   router.get('/', rejectUnauthenticated, (req, res) => {
     console.log('Ticket Info GET');
   
-    const sqlQuery = `SELECT "question","department","priority" FROM "question_table";`;
+    const sqlQuery = `SELECT "id","question","department","priority" FROM "question_table";`;
     
     // console.log('Log for sql Params', sqlParams);
   
@@ -42,6 +42,26 @@ router.post('/', rejectUnauthenticated, (req, res) => {   //MW****
       })
       .catch((err) => {
         console.log('ERROR: Get all Tickets', err);
+        res.sendStatus(500)
+      })
+  
+  });
+
+
+  router.get('/:id', (req, res) => {
+    console.log('Details GET');
+    console.log();
+  
+    const query = `SELECT "question","department" FROM "question_table" WHERE id=$1;`;
+    const sqlParams=[req.params.id]
+  
+    pool.query(query,sqlParams)
+      .then( result => {
+        console.log('TICKET Details GET', result.rows);
+        res.send(result.rows);
+      })
+      .catch(err => {
+        console.log('ERROR: Get individual Ticket', err);
         res.sendStatus(500)
       })
   

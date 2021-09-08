@@ -33,7 +33,7 @@ function SideBar() {
             <SideBarRow Icon= {HomeIcon} title="Home" link={goToHome}/>
             <SideBarRow Icon={AssistantPhotoIcon} title="Add Requests" link={addRequest}/>
             <SideBarRow Icon={AnnouncementIcon} title =" Open Requests"link={openRequest}/>
-            <SideBarRow Icon={VideoCallIcon} title ="Add to Library"link={addToLibrary}/>
+            {/* <SideBarRow Icon={VideoCallIcon} title ="Add to Library"link={addToLibrary}/> */}
             <SideBarRow Icon={VideoLibraryIcon} title="Library"link={goToLibrary}/>
             <hr/>
         </div>
