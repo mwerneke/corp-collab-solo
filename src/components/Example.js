@@ -72,7 +72,7 @@ const Example = () => {
       <h2 className="title">Video Fulfillment</h2>
       <div className="wrapper">
         <div className="pills">
-          <Pill style={{backgroundColor: status === 'recording'?'green':'inherit' }} title="Status" value={status} />
+          <Pill style={{backgroundColor: status === 'recording'?'red':'inherit' }} title="Status" value={status} />
           <Pill
             style={{ flexGrow: 1 }}
             title="Blob URL"

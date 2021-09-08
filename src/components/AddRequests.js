@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import './AddRequests.css';
 
+
 function AddRequests() {
     const dispatch = useDispatch();
     const history = useHistory();
+    
+    useEffect(() => {
+        dispatch({
+            type: 'FETCH_TICKETS'
+        });
+    }, []);
+
 
 
 let [question, setQuestion] = useState('')
@@ -54,7 +62,7 @@ let [priority, setPriority] = useState('')
         <div className="addRequests">
             <form name= "frm" onSubmit={postTicket}>
                 <h5>Tutorial Request</h5>
-                <textarea rows='5' className="question" onChange={handleQuestion}/> 
+                <textarea rows='5' font-size ='16px'className="question" onChange={handleQuestion}/> 
                 <br/>
                 <h5>Department</h5>        
                 <select className="deptDropdown" placeholder="Departments" onChange={handleDept}>  

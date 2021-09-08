@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.post('/', (req, res) => {   //MW****
-    console.log(req.body, 'POST LOG');
+    console.log(req.body, 'POST LOG ff');
     // RETURNING "id" will give us back the id of the created video
     const insertVideoQuery = `
     INSERT INTO "solo" ("key")
@@ -20,13 +20,13 @@ router.post('/', (req, res) => {   //MW****
     })
   })
 
-  router.get('/:id', (req, res) => {
+  router.get('/', (req, res) => {
     console.log('video Details GET');
   
     const query = `SELECT "key" FROM "solo";`;
-    const sqlParams=[req.params.id]
+    // const sqlParams=[req.params.id]
   
-    pool.query(query,sqlParams)
+    pool.query(query)
       .then( result => {
         console.log('video Details GET', result.rows);
         res.send(result.rows);

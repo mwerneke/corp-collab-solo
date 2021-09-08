@@ -5,7 +5,7 @@ function* fetchTickets() {
  
     try {
       const tickets = yield axios.get("/api/ticket");  //is this right or wrong?
-      console.log("get all:", tickets.data);
+      console.log("get all tickets:", tickets.data);
       yield put({
         type: "SET_TICKETS",
         payload: tickets.data,

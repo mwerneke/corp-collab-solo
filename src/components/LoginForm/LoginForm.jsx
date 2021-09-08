@@ -28,11 +28,12 @@ function LoginForm(props) {
 
   return (
     <>
+    
     <img
           className="form__logo"
           src={Logo} alt=""/>
     
-    <form className="formPanel" onSubmit={login}>
+    <form className="formPanel" onSubmit={login} >
       
       <div className="form">
       
@@ -50,6 +51,7 @@ function LoginForm(props) {
             name="username"
             required
             value={username}
+            
             onChange={(event) => setUsername(event.target.value)}
           />
         </label>
@@ -71,6 +73,7 @@ function LoginForm(props) {
       </div>
       </div>
     </form>
+    
     </>
   );
 }
