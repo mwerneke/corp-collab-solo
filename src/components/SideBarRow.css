@@ -13,7 +13,7 @@
 .sidebarRow__title{
     flex:1;
     margin-left: 20px;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 500px;
     color: gray;
 }
@@ -22,7 +22,7 @@
     cursor:pointer;
 }
 .sidebarRow:hover > .sidebarRow__icon{
-    color:rgb(48, 121, 26);
+    color:rgb(45, 48, 247);
 }
 .sidebarRow:hover > .sidebarRow__title{
     font-weight: bold;

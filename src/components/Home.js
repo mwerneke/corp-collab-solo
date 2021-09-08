@@ -18,9 +18,9 @@ function Home() {
 
 
             <h2 className="title">Make a Video Request</h2>
-            <Button onClick={handleClick}>
-            <AddIcon  className="home__Icon" />
-            </Button>
+            
+            <AddIcon onClick={handleClick} className="home__Icon" />
+            
             <h4 className="subtitle">What do you need help with?</h4>
 
 

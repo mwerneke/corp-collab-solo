@@ -9,11 +9,11 @@ function SideBarRow({selected, Icon,title, link}) {
            {/* <Button color = "primary"  size= "medium" startIcon= 
            {<Icon/>}>{title}</Button>
             */}
-            <Button onClick={link} >   
+            {/* <Button onClick={link} >    */}
             <Icon className="sidebarRow__icon" />
-            <h2 className="sidebarRow__title">{title}</h2>
+            <h2 onClick={link} className="sidebarRow__title">{title}</h2>
             
-            </Button>
+            {/* </Button> */}
         </div>
     )
 }
