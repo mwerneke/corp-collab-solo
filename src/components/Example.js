@@ -36,10 +36,11 @@ const Example = () => {
 
   const handleUpload = async (details) => {
     const key = `${nanoid()}.webm`
-    
+    const question = ticketDetailReducer[0].question
+    const department = ticketDetailReducer[0].department
     // const title = `${FetchDetail()}` //TESTING
     const { data } = await axios.post('http://localhost:5522/api/storage/presignedUrl', {
-      key, 
+      key, question, department
       
     })
     const { url } = data
@@ -64,7 +65,8 @@ const Example = () => {
 
     dispatch({   //**ADDED */
       type: 'POST_VIDEO',
-      payload: key
+      payload: {key, question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department 
+      }
       // question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department 
       // Key is the video , Question and dept is whats been selected from  open requests
     })

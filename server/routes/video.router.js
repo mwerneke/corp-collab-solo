@@ -7,11 +7,11 @@ router.post('/', (req, res) => {   //MW****
     console.log(req.body, 'POST LOG ');
     // RETURNING "id" will give us back the id of the created video
     const insertVideoQuery = `
-    INSERT INTO "solo" ("key")
-    VALUES ($1);`
+    INSERT INTO "solo" ("key", "question", "department")
+    VALUES ($1, $2, $3);`
     // RETURNING "id";`
     // Makes Video
-    pool.query(insertVideoQuery, [req.body.key])
+    pool.query(insertVideoQuery, [req.body.key, req.body.question, req.body.department])
     .then(result => {
       // console.log('New Video Id:', result.rows[0].id); //ID IS HERE!
     }).catch(err => {

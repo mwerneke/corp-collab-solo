@@ -5,7 +5,7 @@ import {takeLatest, put} from 'redux-saga/effects'
 function* postVideo(action) {   
     try {
       console.log(action, 'MICHAELMICHAEL');
-      const response = yield axios.post("/api/video", {key:action.payload}); //server.js express route 
+      const response = yield axios.post("/api/video", action.payload); //server.js express route 
       console.log(response.data);
       yield put({
         type: "FETCH_VIDEOS",
