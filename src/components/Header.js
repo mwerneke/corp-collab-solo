@@ -16,7 +16,7 @@ function Header(props) {
   const user = useSelector((store) => store.user);
   
   const search=()=>{
-    history.push('/library')
+    history.push('/librarysearch')
 }
 // set up a function that when input is changed search the library directory reference Pizza Parlor
   return (

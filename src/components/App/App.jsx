@@ -139,6 +139,18 @@ function App() {
             </div>
             
           </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/librarysearch"
+          >
+            <Header/>
+            <div className="app__page">
+            <SideBar/>
+            
+            </div>
+            
+          </ProtectedRoute>
 
           <Route
             exact

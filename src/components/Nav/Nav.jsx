@@ -31,6 +31,9 @@ function Nav() {
             <Link className="addRequests" to="/addrequests">
               addRequests
             </Link>
+            <Link className="librarySearch" to="/librarySearch">
+              librarySearch
+            </Link>
 
             <Link className="navLink" to="/info">
               Info Page
