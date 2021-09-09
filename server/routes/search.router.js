@@ -5,10 +5,11 @@ const router = express.Router();
 router.get('/', (req, res) => {
     console.log('videoSearch results GET');
   
-    const query = `SELECT "key", "question", "department" FROM "solo";`;
+    const query = `SELECT "question" FROM "solo" WHERE "question" LIKE '%' || $1 || '%';`;
     // const sqlParams=[req.params.id]
   
-    pool.query(query)
+    pool.query(query, [req.body.searchWord])
+    
       .then( result => {
         console.log('videoSearch  GET', result.rows);
         res.send(result.rows);
@@ -20,13 +21,9 @@ router.get('/', (req, res) => {
   
   });
 
+  
 
-
-
-
-
-
-
+//Need to set up store reducer
 
 
 

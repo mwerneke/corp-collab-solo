@@ -26,13 +26,13 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 
 //ROUTES FOR SOLO *****
-const videoRouter = require('./routes/video.router'); 
+const videoRouter = require('./routes/video.router'); //
 app.use('/api/video', videoRouter)
 
-const ticketRouter = require('./routes/ticket.router');   
+const ticketRouter = require('./routes/ticket.router');   //Tickets
 app.use('/api/ticket', ticketRouter)
 
-const searchRouter = require('/routes/search.router');
+const searchRouter = require('./routes/search.router');  //Video Search
 app.use('/api/search', searchRouter)
 
 
