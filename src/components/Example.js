@@ -39,7 +39,8 @@ const Example = () => {
     
     // const title = `${FetchDetail()}` //TESTING
     const { data } = await axios.post('http://localhost:5522/api/storage/presignedUrl', {
-      key,
+      key, 
+      
     })
     const { url } = data
 
@@ -64,14 +65,15 @@ const Example = () => {
     dispatch({   //**ADDED */
       type: 'POST_VIDEO',
       payload: key
-        
-       
+      // question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department 
+      // Key is the video , Question and dept is whats been selected from  open requests
     })
     history.push('/library')
 
   }
 
-
+  // {key, question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department 
+  // }
 
 
 //add back <FetchDetail/> remove store

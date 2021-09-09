@@ -25,3 +25,9 @@
   padding-left: 95px;
   padding-top: 45px;
 }
+.plane{
+  transform: scale(.25);
+  padding-right: 150px;
+  align-content: center;
+  float:left;
+}
