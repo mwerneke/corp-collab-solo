@@ -7,6 +7,7 @@ import userSaga from './user.saga';
 import videoSaga from './video.saga';
 import fetchTicket from './fetchTicket.saga';
 import fetchDetail from './ticketDetail.saga';
+import searchSaga from './search.saga';
 
 
 // rootSaga is the primary saga.
@@ -26,5 +27,6 @@ export default function* rootSaga() {
     ticketSaga(),
     fetchSaga(),
     fetchDetail(),
+    searchSaga(),
   ]);
 }

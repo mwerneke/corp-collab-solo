@@ -32,6 +32,9 @@ app.use('/api/video', videoRouter)
 const ticketRouter = require('./routes/ticket.router');   
 app.use('/api/ticket', ticketRouter)
 
+const searchRouter = require('/routes/search.router');
+app.use('/api/search', searchRouter)
+
 
 app.use(express.static('build'));
 

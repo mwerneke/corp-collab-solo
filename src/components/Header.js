@@ -10,12 +10,29 @@ import {useSelector} from 'react-redux';
 import {useState} from 'react';
 
 function Header(props) {
-  const [inputSearch, setInputSearch] =useState();
+  const [inputSearch, setInputSearch] =useState('');
+  
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   
-  const search=()=>{
+  const submitSearch = event =>{
+    event.preventDefault();
+    console.log('About to dispatch Search Query');
+      dispatch({
+        type: 'SEARCH_VIDEO_SAGA',
+        payload:inputSearch
+      })
+      setInputSearch('')
+  
+
+
+
+
+
+
+
+
     history.push('/librarysearch')
 }
 // set up a function that when input is changed search the library directory reference Pizza Parlor
@@ -29,7 +46,7 @@ function Header(props) {
       </div>
       <div className="header__input">
         <input onChange ={e => setInputSearch(e.target.value)} value ={inputSearch} placeholder="  How to..." type="text" />
-        <Button onClick={search}>
+        <Button onClick={submitSearch}>
         <SearchSharpIcon className="header__inputBtn" />
         </Button>
       </div>
