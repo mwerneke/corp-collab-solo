@@ -23,7 +23,7 @@ router.post('/', (req, res) => {   //MW****
   router.get('/', (req, res) => {
     console.log('video Details GET');
   
-    const query = `SELECT "key" FROM "solo";`;
+    const query = `SELECT "key", "question", "department" FROM "solo";`;
     // const sqlParams=[req.params.id]
   
     pool.query(query)

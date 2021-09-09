@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 function Library() {
 //fetch to the table get the data map 
-const video = useSelector((store) => store.video);
+const videoReducer = useSelector((store) => store.videoReducer);
 const dispatch = useDispatch();
 
 useEffect(() => {
@@ -20,9 +20,10 @@ useEffect(() => {
         <div className="library">
             <h2>Corporate Library</h2>
             <div className="library__videos">
-           {video && video.map(video => {
-               return <VideoCard key={video.key} video={"https://corp-collab.s3.us-east-2.amazonaws.com/"+video.key} 
-           
+           {videoReducer && videoReducer.map(videoReducer => {
+               
+               return <VideoCard key={videoReducer.key} video={"https://corp-collab.s3.us-east-2.amazonaws.com/"+videoReducer.key} 
+               title={videoReducer.question} dept={videoReducer.department}
            />})}
            
 
