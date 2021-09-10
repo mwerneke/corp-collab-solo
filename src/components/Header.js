@@ -18,6 +18,7 @@ function Header(props) {
   const submitSearch = event => {
     event.preventDefault();
     console.log('About to dispatch Search Query');
+    
     dispatch({
       type: 'SEARCH_VIDEO_SAGA',
       payload: inputSearch

@@ -14,7 +14,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
+import Search from '../Search';
 import { useDispatch, useSelector } from 'react-redux';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import LandingPage from '../LandingPage/LandingPage';
@@ -136,6 +136,7 @@ function App() {
             <Header />
             <div className="app__page">
               <SideBar />
+              <Search/>
 
             </div>
 

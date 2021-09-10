@@ -3,15 +3,20 @@ import { takeLatest, put } from "redux-saga/effects";
 
 function* searchVideo(action) {
   try {
-    const response = yield axios.get("/api/search", {
-      searchWord: action.payload,
-    });
+    // console.log('MIKEMIKEMIKE',action);
+    // const paramsToPass= {searchWord:action.payload}
+    const response = yield axios.get(`/api/search/${action.payload}`)
+    // {
+    //   searchWord: action.payload,
+    // });
+    
     //    params: {searchWord: action.payload}
-
+    
     yield put({
       type: "SEARCH_VIDEO",
       payload: response.data,
     });
+    
   } catch (error) {
     console.log("searchVideo error", error);
   }
