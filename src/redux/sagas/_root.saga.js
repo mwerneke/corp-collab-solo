@@ -1,14 +1,13 @@
-import { all } from 'redux-saga/effects';
-import fetchSaga from './fetchVideo.saga';
-import loginSaga from './login.saga';
-import ticketSaga from './ticket.saga';
-import registrationSaga from './registration.saga';
-import userSaga from './user.saga';
-import videoSaga from './video.saga';
-import fetchTicket from './fetchTicket.saga';
-import fetchDetail from './ticketDetail.saga';
-import searchSaga from './search.saga';
-
+import { all } from "redux-saga/effects";
+import fetchSaga from "./fetchVideo.saga";
+import loginSaga from "./login.saga";
+import ticketSaga from "./ticket.saga";
+import registrationSaga from "./registration.saga";
+import userSaga from "./user.saga";
+import videoSaga from "./video.saga";
+import fetchTicket from "./fetchTicket.saga";
+import fetchDetail from "./ticketDetail.saga";
+import searchSaga from "./search.saga";
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.

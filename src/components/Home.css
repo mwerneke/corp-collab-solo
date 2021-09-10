@@ -1,14 +1,13 @@
 .home {
   flex: 0.8;
   padding-left: 150px;
-  
 }
 
 .home__Icon {
   transform: scale(3);
   margin-left: 205px;
   margin-top: 45px;
-  color:rgb(22, 149, 223)
+  color: rgb(22, 149, 223);
 }
 
 .title {
@@ -25,9 +24,9 @@
   padding-left: 95px;
   padding-top: 45px;
 }
-.plane{
-  transform: scale(.25);
+.plane {
+  transform: scale(0.25);
   padding-right: 150px;
   align-content: center;
-  float:left;
+  float: left;
 }

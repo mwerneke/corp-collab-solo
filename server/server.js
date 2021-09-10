@@ -1,15 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-require('dotenv').config();
+const express = require("express");
+const bodyParser = require("body-parser");
+require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-const sessionMiddleware = require('./modules/session-middleware');
-const passport = require('./strategies/user.strategy');
+const sessionMiddleware = require("./modules/session-middleware");
+const passport = require("./strategies/user.strategy");
 
 // Route includes
-const userRouter = require('./routes/user.router');
+const userRouter = require("./routes/user.router");
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -23,23 +23,21 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /* Routes */
-app.use('/api/user', userRouter);
+app.use("/api/user", userRouter);
 
 //ROUTES FOR SOLO *****
-const videoRouter = require('./routes/video.router'); //
-app.use('/api/video', videoRouter)
+const videoRouter = require("./routes/video.router"); //
+app.use("/api/video", videoRouter);
 
-const ticketRouter = require('./routes/ticket.router');   //Tickets
-app.use('/api/ticket', ticketRouter)
+const ticketRouter = require("./routes/ticket.router"); //Tickets
+app.use("/api/ticket", ticketRouter);
 
-const searchRouter = require('./routes/search.router');  //Video Search
-app.use('/api/search', searchRouter)
+const searchRouter = require("./routes/search.router"); //Video Search
+app.use("/api/search", searchRouter);
 
-
-app.use(express.static('build'));
+app.use(express.static("build"));
 
 // App Set //
-
 
 /** Listen * */
 app.listen(PORT, () => {

@@ -1,42 +1,33 @@
 .addRequests {
-        flex:.8;
-        width: 50%;
-        padding: 20px 20px;
-        margin: 60px 60px;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px; 
-        font-size: 20px;
-        
-        box-sizing: border-box;
-        text-align: center;
-        
-      }
+  flex: 0.8;
+  width: 50%;
+  padding: 20px 20px;
+  margin: 60px 60px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
 
-      .frm{
-        Font-Family: 'Work Sans', Sans-Serif;
-      }
-      .question{
-        font-size: 18px;
-        Font-Family: 'Work Sans', Sans-Serif;
-        width: 400px;
-      }
-      
-     
-   
+  box-sizing: border-box;
+  text-align: center;
+}
 
+.frm {
+  font-family: "Work Sans", Sans-Serif;
+}
+.question {
+  font-size: 18px;
+  font-family: "Work Sans", Sans-Serif;
+  width: 400px;
+}
 
-
-
-
-  /* text-align: center;
+/* text-align: center;
   background-color: rgb(217, 237, 247);
 
   margin: auto;
   width: 50%;
   border: 1px solid rgb(143, 182, 240);
   padding-left: 10px; */
-
 
 /* .question {
   margin: 10px;

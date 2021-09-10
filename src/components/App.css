@@ -1,34 +1,30 @@
-.app__page{
-    display:flex;
-
+.app__page {
+  display: flex;
 }
-.app{
-    text-align: center;
-    width: 100%
+.app {
+  text-align: center;
+  width: 100%;
 }
-.example{
-    margin: 0 auto
-    
+.example {
+  margin: 0 auto;
 }
 
-
-.library{
-    margin-top: 20px;
+.library {
+  margin-top: 20px;
 }
 .drop {
-    display:flex ;
-    width: 25%;
-    border: dashed;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    box-sizing: border-box;
-    min-height: 150px;
-    border-color: rgba(99, 144, 186, 0.12);
-    border-radius: 2px;
-    background-color: #fcfdfe;
-    margin-left: 60px;
-    margin-top:40px;
-    margin-bottom: 150px;
-    
+  display: flex;
+  width: 25%;
+  border: dashed;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 150px;
+  border-color: rgba(99, 144, 186, 0.12);
+  border-radius: 2px;
+  background-color: #fcfdfe;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 150px;
 }

@@ -3,14 +3,11 @@ import Header from "../Header";
 import SideBar from '../SideBar';
 import Library from '../Library';
 import OpenRequests from '../OpenRequests';
-// import FetchTicket from '../FetchTicket.jsx';
 import Example from '../Example';
 import Footer from '../Footer';
 import AddRequests from '../AddRequests';
 import Home from '../Home';
 import "../App.css";
-
-
 import {
   HashRouter as Router,
   Redirect,
@@ -19,15 +16,7 @@ import {
 } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-
-import Nav from '../Nav/Nav';
-
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
-import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -47,7 +36,7 @@ function App() {
     <Router>
       {/* <Header /> */}
       <div>
-      
+
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
@@ -65,29 +54,29 @@ function App() {
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
-          
+
           <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
             path="/home"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            <Home/>
+              <SideBar />
+              <Home />
             </div>
           </ProtectedRoute>
-          
+
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/home"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            <Home/>
+              <SideBar />
+              <Home />
             </div>
           </ProtectedRoute>
           <ProtectedRoute
@@ -95,61 +84,61 @@ function App() {
             exact
             path="/addrequests"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            <AddRequests/>
+              <SideBar />
+              <AddRequests />
             </div>
-            
+
           </ProtectedRoute>
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/openrequests"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            <OpenRequests/>
+              <SideBar />
+              <OpenRequests />
             </div>
-            
+
           </ProtectedRoute>
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/addtolibrary"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            {/* <FetchTicket/> */}
-            <Example/>
+              <SideBar />
+              {/* <FetchTicket/> */}
+              <Example />
             </div>
-            
+
           </ProtectedRoute>
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/library"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            <Library/>
+              <SideBar />
+              <Library />
             </div>
-            
+
           </ProtectedRoute>
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/librarysearch"
           >
-            <Header/>
+            <Header />
             <div className="app__page">
-            <SideBar/>
-            
+              <SideBar />
+
             </div>
-            
+
           </ProtectedRoute>
 
           <Route
@@ -198,11 +187,11 @@ function App() {
           <Route>
             <h1>404</h1>
           </Route>
-          
+
         </Switch>
         <Footer />
       </div>
-      
+
     </Router>
   );
 }
@@ -223,7 +212,7 @@ export default App;
 //           <Route path='/addtolibrary'>
 //             <SideBar />
 //             <br/>
-            
+
 //             <Example />  
 //           </Route>
 //           <Route path='/addrequest'>
@@ -237,7 +226,7 @@ export default App;
 //           <Route path='/library' exact>
 //             <SideBar />
 //             <Library />
-            
+
 //           </Route>
 //         </div>
 

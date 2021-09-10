@@ -1,17 +1,15 @@
-.videoCard{
-    margin-bottom: 40px;
-    width: 270px;
+.videoCard {
+  margin-bottom: 40px;
+  width: 270px;
 }
-.videoCard__thumbnail{
-    height: 140px;
-    width: 250px;
-    
+.videoCard__thumbnail {
+  height: 140px;
+  width: 250px;
 }
-.vid{
-    height: 140px;
-    width: 250px;
-
+.vid {
+  height: 140px;
+  width: 250px;
 }
 p {
-color:black
+  color: black;
 }

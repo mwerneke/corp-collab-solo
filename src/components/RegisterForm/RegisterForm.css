@@ -11,13 +11,12 @@
 }
 
 .form__logo {
-    height: 68px;
-    text-align: center;
-    display:flex;
-    margin: auto;
-    align-self: center;
-    padding-top: 100px;
-    
-    padding-left: 10px;
+  height: 68px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  align-self: center;
+  padding-top: 100px;
 
+  padding-left: 10px;
 }

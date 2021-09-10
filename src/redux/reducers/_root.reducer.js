@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux';
-import errors from './errors.reducer';
-import user from './user.reducer';
-import videoReducer from './video.reducer'
-import ticketReducer from './ticket.reducer'
-import ticketDetailReducer from './ticketDetail.reducer';
-import searchReducer from './search.reducer';
+import { combineReducers } from "redux";
+import errors from "./errors.reducer";
+import user from "./user.reducer";
+import videoReducer from "./video.reducer";
+import ticketReducer from "./ticket.reducer";
+import ticketDetailReducer from "./ticketDetail.reducer";
+import searchReducer from "./search.reducer";
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
 // This is imported in index.js as rootSaga
@@ -15,9 +15,9 @@ const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
   videoReducer,
-  ticketReducer,   //ALWAYS MAKE SURE TO IMPORT FROM SOURCE
+  ticketReducer, //ALWAYS MAKE SURE TO IMPORT FROM SOURCE
   ticketDetailReducer,
-  searchReducer
+  searchReducer,
 });
 
 export default rootReducer;

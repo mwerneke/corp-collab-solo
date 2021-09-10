@@ -1,41 +1,32 @@
 import React from 'react'
 import SearchSharpIcon from '@material-ui/icons/SearchSharp';
-import DuoSharpIcon from '@material-ui/icons/DuoSharp';
 import './Header.css';
 import Logo from './Logo.png'
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
-import {useDispatch} from 'react-redux'
-import {useSelector} from 'react-redux';
-import {useState} from 'react';
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 function Header(props) {
-  const [inputSearch, setInputSearch] =useState('');
-  
+  const [inputSearch, setInputSearch] = useState('');
+
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
-  
-  const submitSearch = event =>{
+
+  const submitSearch = event => {
     event.preventDefault();
     console.log('About to dispatch Search Query');
-      dispatch({
-        type: 'SEARCH_VIDEO_SAGA',
-        payload:inputSearch
-      })
-      setInputSearch('')
-  
-
-
-
-
-
-
-
+    dispatch({
+      type: 'SEARCH_VIDEO_SAGA',
+      payload: inputSearch
+    })
+    setInputSearch('')
 
     history.push('/librarysearch')
-}
-// set up a function that when input is changed search the library directory reference Pizza Parlor
+  }
+  // set up a function that when input is changed search the library directory reference Pizza Parlor
   return (
     <div className="header">
       <div className="header__left">
@@ -45,9 +36,9 @@ function Header(props) {
           src={Logo} alt="" />
       </div>
       <div className="header__input">
-        <input onChange ={e => setInputSearch(e.target.value)} value ={inputSearch} placeholder="  How to..." type="text" />
+        <input onChange={e => setInputSearch(e.target.value)} value={inputSearch} placeholder="  Need to Know..." type="text" />
         <Button onClick={submitSearch}>
-        <SearchSharpIcon className="header__inputBtn" />
+          <SearchSharpIcon className="header__inputBtn" />
         </Button>
       </div>
       <div className="header__right">
@@ -58,14 +49,14 @@ function Header(props) {
           <div className="stack">
             {
               user ?
-          <h2> {user.username}</h2>
-          :
-          <h3>No user logged-in</h3>
+                <h2> {user.username}</h2>
+                :
+                <h3>No user logged-in</h3>
             }
-          <Button className={props.className}
-      onClick={() => dispatch({ type: 'LOGOUT' })}
-    >Log Out</Button>
-    </div>
+            <Button className={props.className}
+              onClick={() => dispatch({ type: 'LOGOUT' })}
+            >Log Out</Button>
+          </div>
         </div>
       </div>
     </div>
