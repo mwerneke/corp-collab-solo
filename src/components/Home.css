@@ -17,8 +17,8 @@
 }
 
 .home__Icon:hover {
-  /* background-color: rgb(8, 172, 236);
-  cursor: pointer; */
+  color: rgb(8, 245, 20);
+  cursor: pointer;
 }
 .subtitle {
   padding-left: 95px;

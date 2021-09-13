@@ -6,6 +6,7 @@ import Logo from "../Logo.png";
 function RegisterForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const auth_level= ''
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
 
@@ -17,6 +18,7 @@ function RegisterForm() {
       payload: {
         username: username,
         password: password,
+        auth_level
       },
     });
   }; // end registerUser

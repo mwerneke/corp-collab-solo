@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
 function OpenRequests() {
+  const user = useSelector((store) => store.user);
   const ticketReducer = useSelector((store) => store.ticketReducer);
   console.log(
     "LOG OF ticketReducer in Open Requests",
@@ -49,6 +50,7 @@ function OpenRequests() {
                   <td>{item.question}</td>
                   <td>{item.department}</td>
                   <td>{item.priority}</td>
+               
                   <td>
                     <button
                       onClick={(event) => seeTicket(item.id)}
@@ -59,6 +61,16 @@ function OpenRequests() {
                       Select
                     </button>
                   </td>
+                  {user.auth_level === 'ADMIN' ?
+              <>
+              <td>
+              <button>Delete</button>
+              </td>
+              </>
+              :
+              <>
+              </>
+              }
                 </tr>
               );
             })}

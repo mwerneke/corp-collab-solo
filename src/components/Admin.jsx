@@ -1,12 +1,13 @@
+import React from 'react'
+
 import React, { useEffect } from "react";
 import "./Library.css";
 import VideoCard from "./VideoCard";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-function Library() {
+function Admin() {
   //fetch to the table get the data map
-  const user = useSelector((store) => store.user);
   const videoReducer = useSelector((store) => store.videoReducer);
   const dispatch = useDispatch();
 
@@ -31,16 +32,12 @@ function Library() {
                 }
                 title={videoReducer.question}
                 dept={videoReducer.department}
-              
-              
               />
-            
             );
           })}
-           
       </div>
     </div>
   );
 }
 
-export default Library;
+export default Admin;

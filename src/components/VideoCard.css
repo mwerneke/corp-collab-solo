@@ -12,4 +12,8 @@
 }
 p {
   color: black;
+  text-align: left;
+}
+.delete{
+  margin-top: 5px;
 }

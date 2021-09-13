@@ -41,8 +41,8 @@ function Nav() {
             <LogOutButton className="navLink" />
           </>
         )}
-
-        <Link className="navLink" to="/about">
+        {user.authLevel === 'ADMIN' &&}
+        <Link className="navLink" to="/admin">
           About
         </Link>
       </div>
