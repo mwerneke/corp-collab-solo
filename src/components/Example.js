@@ -72,14 +72,13 @@ const Example = () => {
         department: ticketDetailReducer[0].department,
       },
     });
+    let id=ticketDetailReducer[0].id;
     dispatch({
       //**ADDED */
       type: "DELETE_OPENREQUEST", 
-      payload: {
+      payload: id
         
-        question: ticketDetailReducer[0].question,
-        department: ticketDetailReducer[0].department,
-      },
+      
     });
 
       

@@ -7,8 +7,8 @@ function* ticketDelete(action) {
     const detail = yield axios.delete(`/api/ticket/${action.payload}`); //is this right or wrong?
     console.log("get ticket Detail:", detail.data);
     yield put({
-      type: "SET_TICKETS",
-      payload: detail.data,
+      type: "FETCH_TICKETS"
+      
     });
   } catch {
     console.log("get ticketDetail error");

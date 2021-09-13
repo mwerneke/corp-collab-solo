@@ -57,7 +57,7 @@ router.get("/:id", (req, res) => {
   console.log("Details GET");
   console.log();
 
-  const query = `SELECT "question","department" FROM "question_table" WHERE id=$1;`;
+  const query = `SELECT "id","question","department" FROM "question_table" WHERE id=$1;`;
   const sqlParams = [req.params.id];
 
   pool
@@ -75,9 +75,11 @@ router.get("/:id", (req, res) => {
 
 router.delete('/:id', rejectUnauthenticated, (req, res) =>{
   console.log('hahah',req.params);
+  console.log('hahah',req.params.id);
   console.log('ROUTER DELETE******');
+  const id= req.params.id;
   const queryText =`DELETE FROM "question_table" WHERE id = $1 RETURNING *;`;
-  pool.query(queryText)
+  pool.query(queryText, [id])
   .then((result) => {
     res.sendStatus(201)
   }).catch((error)=> {
