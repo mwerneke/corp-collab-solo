@@ -23,7 +23,9 @@ function VideoCard({ dept, title, video }) {
       <div className="delete">
       {user.auth_level === 'ADMIN' ?
               <>
-              <button>Delete</button>
+              <button
+              className="Btn"
+              >Delete</button>
               </>
               :
               <>

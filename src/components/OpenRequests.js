@@ -32,6 +32,22 @@ function OpenRequests() {
     history.push("/addtolibrary");
   };
 
+  const handleDelete = (event) =>{
+    console.log('ButtonClicked');
+    event.preventDefault();
+    
+    let id=ticketReducer[0].id;
+    
+    dispatch({
+      //**ADDED */
+      type: "DELETE_OPENREQUEST", 
+      payload: id
+        
+      
+    });
+
+  }
+
   return (
     <>
       <div className="container">
@@ -64,7 +80,10 @@ function OpenRequests() {
                   {user.auth_level === 'ADMIN' ?
               <>
               <td>
-              <button>Delete</button>
+              <button
+              onClick={handleDelete}
+              className="Btn"
+              >Delete</button>
               </td>
               </>
               :
