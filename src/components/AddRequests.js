@@ -5,6 +5,7 @@ import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import "./AddRequests.css";
 
+
 function AddRequests() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -59,6 +60,7 @@ function AddRequests() {
   return (
     <div className="addRequests">
       <form name="frm" onSubmit={postTicket}>
+        <div className="styling">
         <h5>Tutorial Request</h5>
         <textarea
           rows="5"
@@ -109,6 +111,7 @@ function AddRequests() {
           Add a Ticket
         </Button>
         {/* <button onClick={handleBackBtn}/> */}
+        </div>
       </form>
       <br />
       <Button

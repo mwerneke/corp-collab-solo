@@ -72,4 +72,21 @@ router.get("/:id", (req, res) => {
     });
 });
 
+
+router.delete('/:id', rejectUnauthenticated, (req, res) =>{
+  console.log('hahah',req.params);
+  console.log('ROUTER DELETE******');
+  const queryText =`DELETE FROM "question_table" WHERE id = $1 RETURNING *;`;
+  pool.query(queryText)
+  .then((result) => {
+    res.sendStatus(201)
+  }).catch((error)=> {
+    res.sendStatus(500);
+  })
+
+});
+
+
+
+
 module.exports = router;

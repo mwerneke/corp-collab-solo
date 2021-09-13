@@ -39,7 +39,7 @@ function OpenRequests() {
             <th>Ticket Question</th>
             <th>Department</th>
             <th>Priority</th>
-            <th>Select</th>
+            <th>Action</th>
           </tr>
 
           {ticketReducer &&

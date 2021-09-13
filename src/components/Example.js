@@ -65,15 +65,34 @@ const Example = () => {
 
     dispatch({
       //**ADDED */
-      type: "POST_VIDEO",
+      type: "POST_VIDEO", 
       payload: {
         key,
         question: ticketDetailReducer[0].question,
         department: ticketDetailReducer[0].department,
       },
+    });
+    dispatch({
+      //**ADDED */
+      type: "DELETE_OPENREQUEST", 
+      payload: {
+        
+        question: ticketDetailReducer[0].question,
+        department: ticketDetailReducer[0].department,
+      },
+    });
+
+      
+      // type:"UPDATE_DELETE_OPENREQUEST",
+      // payload:{
+      //   question: ticketDetailReducer[0].question,
+      //   department: ticketDetailReducer[0].department,
+        
+
+      // }
       // question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department
       // Key is the video , Question and dept is whats been selected from  open requests
-    });
+  
     history.push("/library");
   };
 

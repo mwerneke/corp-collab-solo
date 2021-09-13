@@ -7,18 +7,24 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 20px;
-
+  background-image: url("/Users/michaelwerneke/tier1/corp-collab-solo/src/components/background3.jpeg");
+  background-size:100%;
   box-sizing: border-box;
+  
   text-align: center;
 }
 
 .frm {
   font-family: "Work Sans", Sans-Serif;
+  font-size: 22px;
 }
+
 .question {
   font-size: 18px;
   font-family: "Work Sans", Sans-Serif;
   width: 400px;
+}
+.styling{
 }
 
 /* text-align: center;

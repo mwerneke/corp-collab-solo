@@ -81,7 +81,7 @@ video {
   border-radius: 1em;
   margin: 1em 0;
   margin-bottom: 2em;
-  box-shadow: rgb(63, 147, 216) 0px 25px 50px -12px;
+  /* box-shadow: rgb(63, 147, 216) 0px 25px 50px -12px; */
 }
 
 div.buttons {

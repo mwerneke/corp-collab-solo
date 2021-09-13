@@ -37,8 +37,8 @@ function Header(props) {
           src={Logo} alt="" />
       </div>
       <div className="header__input">
-        <input onChange={e => setInputSearch(e.target.value)} value={inputSearch} placeholder="  Need to Know..." type="text" />
-        <Button onClick={submitSearch}>
+        <input onChange={e => setInputSearch(e.target.value)} value={inputSearch} placeholder="  What would you like to know?" type="text" />
+        <Button  onClick={submitSearch}>
           <SearchSharpIcon className="header__inputBtn" />
         </Button>
       </div>

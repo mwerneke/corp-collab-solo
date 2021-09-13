@@ -1,0 +1,9 @@
+.library__videos {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Work Sans", Sans-Serif;
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+    /* padding-left: 5px; */
+  }
