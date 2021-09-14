@@ -1,6 +1,9 @@
 const express = require("express");
 const pool = require("../modules/pool");
 const router = express.Router();
+const {
+  rejectUnauthenticated,
+} = require("../modules/authentication-middleware");
 
 router.post("/", (req, res) => {
   //MW****
@@ -42,6 +45,21 @@ router.get("/", (req, res) => {
       console.log("ERROR: Get all videos", err);
       res.sendStatus(500);
     });
+});
+
+router.delete('/:id', rejectUnauthenticated, (req, res) =>{
+  console.log('hahah',req.params);
+  console.log('hahah',req.params.id);
+  console.log('ROUTER DELETE******');
+  const id= req.params.id;
+  const queryText =`DELETE FROM "solo" WHERE key = $1 RETURNING *;`;
+  pool.query(queryText, [id])
+  .then((result) => {
+    res.sendStatus(201)
+  }).catch((error)=> {
+    res.sendStatus(500);
+  })
+
 });
 
 //GET AND POST

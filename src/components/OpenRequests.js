@@ -35,7 +35,7 @@ function OpenRequests() {
   const handleDelete = (event) =>{
     console.log('ButtonClicked');
     event.preventDefault();
-    
+    console.log('Selected Delete',ticketReducer[0].id);
     let id=ticketReducer[0].id;
     
     dispatch({
@@ -79,6 +79,7 @@ function OpenRequests() {
                   </td>
                   {user.auth_level === 'ADMIN' ?
               <>
+              
               <td>
               <button
               onClick={handleDelete}

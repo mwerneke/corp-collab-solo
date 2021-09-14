@@ -63,7 +63,7 @@ function AddRequests() {
         <div className="styling">
         <h5>Tutorial Request</h5>
         <textarea
-          rows="5"
+          rows="3"
           font-size="5px"
           className="question"
           onChange={handleQuestion}
