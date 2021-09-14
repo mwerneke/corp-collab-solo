@@ -4,6 +4,7 @@ import "./Home.css";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 import Library from "./Library";
+import Steps from './Steps.png'
 
 
 function Home() {
@@ -15,17 +16,23 @@ function Home() {
   };
 
   return (
-    
+    <>
     <div className="home">
       <h2 className="title">Make a Video Request</h2>
 
       <AddIcon onClick={handleClick} className="home__Icon" />
 
       <h4 className="subtitle">Click the '+' and begin the process</h4>
-     
+      
     </div>
+    <div>
+      <footer className="foot">
+    <img className="img" src={Steps} alt="" />
+    </footer>
+    </div>
+   
   
-    
+    </>
   );
 }
 

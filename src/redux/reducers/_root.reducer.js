@@ -5,7 +5,7 @@ import videoReducer from "./video.reducer";
 import ticketReducer from "./ticket.reducer";
 import ticketDetailReducer from "./ticketDetail.reducer";
 import searchReducer from "./search.reducer";
-import countReducer from "./videoCount.reducer";
+
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
   ticketReducer, //ALWAYS MAKE SURE TO IMPORT FROM SOURCE
   ticketDetailReducer,
   searchReducer,
-  countReducer
+  
   
 });
 

@@ -81,9 +81,7 @@ const Example = () => {
         
       
     });
-    dispatch({
-      type: "INCREASE",
-    });
+    
 
 
       

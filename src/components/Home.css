@@ -1,5 +1,6 @@
 .home {
    flex: 0.8; 
+   
   padding-left: 150px; 
   box-sizing: border-box;
   
@@ -36,7 +37,14 @@
   padding-top: 45px;
   padding-bottom: 60px;
 }
+.foot{
+  padding-bottom: 180px;
+  padding-left: 265px;
+}
 
+.image{
+  bottom:50px;
+}
 
 /* .plane {
   transform: scale(0.25);

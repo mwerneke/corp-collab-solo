@@ -5,9 +5,12 @@ import "./Search.css";
 function Search() {
   const searchReducer = useSelector((store) => store.searchReducer);
 
+let count= searchReducer.length
+
   return (
     <div>
       <h1> Search Results</h1>
+      <p>Matches: {count} </p>
       <div className="library__videos">
       {searchReducer &&
           searchReducer.map((searchReducer) => {
