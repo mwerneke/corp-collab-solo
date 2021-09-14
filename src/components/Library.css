@@ -13,6 +13,15 @@
   padding-left: 15px;
   padding-top: 5px;
 }
+.library > p {
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-family: "Work Sans", Sans-Serif;
+  font-size: 15px;
+  color: gray;
+  padding-left: 20px;
+  padding-top: 5px;
+}
 
 .library__videos {
   display: flex;

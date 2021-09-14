@@ -8,7 +8,7 @@ function Library() {
   //fetch to the table get the data map
   const user = useSelector((store) => store.user);
   const videoReducer = useSelector((store) => store.videoReducer);
-
+  const countReducer = useSelector((store) => store.countReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,6 +29,14 @@ function Library() {
         
       
     });
+    dispatch({
+      //**ADDED */
+      type: "DECREASE"
+      
+        
+      
+    });
+
   }
 
 
@@ -36,6 +44,7 @@ function Library() {
   return (
     <div className="library">
       <h2>Corporate Library</h2>
+      <p>Video Count: {countReducer}</p>
       <div className="library__videos">
         {videoReducer &&
           videoReducer.map((videoReducer) => {

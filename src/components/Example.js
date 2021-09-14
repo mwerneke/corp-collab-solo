@@ -11,7 +11,8 @@ import { useHistory } from "react-router-dom";
 const Example = () => {
   const dispatch = useDispatch(); //**Added */
   const ticketDetailReducer = useSelector((store) => store.ticketDetailReducer);
-  // const ticketDetailReducer = useSelector((store) => store.ticketDetailReducer); //TESTING
+  
+  
   const history = useHistory();
   const {
     startRecording,
@@ -80,17 +81,13 @@ const Example = () => {
         
       
     });
+    dispatch({
+      type: "INCREASE",
+    });
+
 
       
-      // type:"UPDATE_DELETE_OPENREQUEST",
-      // payload:{
-      //   question: ticketDetailReducer[0].question,
-      //   department: ticketDetailReducer[0].department,
-        
-
-      // }
-      // question:ticketDetailReducer[0].question, department:ticketDetailReducer[0].department
-      // Key is the video , Question and dept is whats been selected from  open requests
+     
   
     history.push("/library");
   };
