@@ -109,7 +109,7 @@ function AddRequests() {
           className="add"
           type="submit"
         >
-          Add a Ticket
+          Create Ticket
         </Button>
         {/* <button onClick={handleBackBtn}/> */}
         </div>

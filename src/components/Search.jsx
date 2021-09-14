@@ -9,7 +9,7 @@ let count= searchReducer.length
 
   return (
     <div>
-      <h1> Search Results</h1>
+      <h1 className="search"> Search Results</h1>
       <p>Matches: {count} </p>
       <div className="library__videos">
       {searchReducer &&
