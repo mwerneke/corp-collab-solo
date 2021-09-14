@@ -19,17 +19,17 @@
   
   margin-left: 570px;
   margin-top: 45px;
-  color: rgb(22, 149, 223);
+  color: rgb(176, 213, 235);
 }
 
 .title {
   align-items: center;
-  padding-left: 460px;
+  padding-left: 430px;
   padding-top: 45px;
 }
 
 .home__Icon:hover {
-  color: rgb(8, 245, 20);
+  color: rgb(78, 152, 212);
   cursor: pointer;
 }
 .subtitle {
