@@ -4,7 +4,7 @@ import "./Home.css";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 import Library from "./Library";
-import Steps from './Steps.png'
+import Step from './Step.png'
 
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
     </div>
     <div>
       <footer className="foot">
-    <img className="img" src={Steps} alt="" />
+    <img className="img" src={Step} alt="" />
     </footer>
     </div>
    
