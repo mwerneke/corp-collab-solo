@@ -4,7 +4,7 @@
   padding: 40 px 20 px;
   padding-bottom: 10 px;
 }
-.library > h2 {
+ h2 {
   margin-left: 5px;
   margin-bottom: 20px;
   font-family: "Work Sans", Sans-Serif;
@@ -17,8 +17,8 @@
   margin-left: 5px;
   margin-bottom: 20px;
   font-family: "Work Sans", Sans-Serif;
-  font-size: 15px;
-  color: gray;
+  font-size: 30px;
+  color: rgb(177, 52, 52);
   padding-left: 20px;
   padding-top: 5px;
 }

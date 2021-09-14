@@ -51,6 +51,9 @@ function OpenRequests() {
   return (
     <>
       <div className="container">
+        <div className="opentickets">
+        <h1>Open Tickets</h1>
+        </div>
         <table id="customers">
           <tr>
             <th>Ticket Question</th>
