@@ -1,10 +1,11 @@
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100px;
+  /* display: flex; */
+  
+  text-align: right;
+  margin: 100px;
+  /* padding-top: 200px; */
   position: sticky;
-  top: 0;
+  bottom: 0;
   z-index: 100;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }

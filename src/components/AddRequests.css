@@ -8,8 +8,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 20px;
-  background-image: url("/Users/michaelwerneke/tier1/corp-collab-solo/src/components/background3.jpeg");
-  background-size:100%;
+  background-image: url("/Users/michaelwerneke/tier1/corp-collab-solo/src/components/best-zendesk-apps.jpeg");
+  background-size:50%;
+  background-repeat: no-repeat;
   box-sizing: border-box;
   
   text-align: center;
@@ -18,12 +19,13 @@
 .frm {
   font-family: "Work Sans", Sans-Serif;
   font-size: 22px;
+  
 }
 
 .question {
   font-size: 18px;
   font-family: "Work Sans", Sans-Serif;
-  width: 400px;
+  width: 350px;
 }
 .styling{
 }

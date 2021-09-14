@@ -32,7 +32,7 @@ function LoginForm(props) {
 
   return (
     <>
-
+    <div className="background">
       <img
         className="form__logo"
         src={Logo} alt="" />
@@ -77,6 +77,7 @@ function LoginForm(props) {
           </div>
         </div>
       </form>
+      </div>
 
     </>
   );

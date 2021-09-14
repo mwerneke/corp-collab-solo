@@ -33,6 +33,7 @@ function App() {
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
   return (
+    <>
     <Router>
       {/* <Header /> */}
       <div>
@@ -64,7 +65,10 @@ function App() {
             <div className="app__page">
               <SideBar />
               <Home />
+              
             </div>
+            
+            
           </ProtectedRoute>
 
 
@@ -77,6 +81,7 @@ function App() {
             <div className="app__page">
               <SideBar />
               <Home />
+              
             </div>
           </ProtectedRoute>
           <ProtectedRoute
@@ -88,6 +93,7 @@ function App() {
             <div className="app__page">
               <SideBar />
               <AddRequests />
+              
             </div>
 
           </ProtectedRoute>
@@ -137,7 +143,7 @@ function App() {
             <div className="app__page">
               <SideBar />
               <Search/>
-
+             
             </div>
 
           </ProtectedRoute>
@@ -188,13 +194,18 @@ function App() {
           <Route>
             <h1>404</h1>
           </Route>
-
+          
         </Switch>
-        <Footer />
+        
       </div>
 
     </Router>
+    
+    
+    </>
+   
   );
+ 
 }
 
 export default App;

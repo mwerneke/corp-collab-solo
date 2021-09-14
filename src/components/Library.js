@@ -18,14 +18,14 @@ function Library() {
   }, []);
 
   const handleDelete =(event) =>{
-    console.log('**VIDEO**', videoReducer[0].key);
+    console.log('**VIDEO**', videoReducer.key);
     
-    let id=videoReducer[0].key;
+    // let id=videoReducer.key;
 
     dispatch({
       //**ADDED */
       type: "DELETE_VIDEO", 
-      payload: id
+      payload: event
         
       
     });
@@ -51,7 +51,7 @@ function Library() {
                 button = {user.auth_level === 'ADMIN' ?
                 <>
                 <button
-                onClick={handleDelete}
+                onClick={(event) =>handleDelete (videoReducer.key)}
                 className="Btn"
                 >Delete</button>
                 </>

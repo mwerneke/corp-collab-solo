@@ -27,12 +27,17 @@ function Header(props) {
 
     history.push('/librarysearch')
   }
+const handleClick = () =>{
+  history.push("/home");
+}
+
   // set up a function that when input is changed search the library directory reference Pizza Parlor
   return (
     <div className="header">
       <div className="header__left">
         {/* <MenuSharpIcon /> */}
         <img
+        onClick={handleClick}
           className="header__logo"
           src={Logo} alt="" />
       </div>

@@ -77,10 +77,11 @@ function AddRequests() {
         >
           <option value="0"></option>
           <option value="Customer Service">Customer Service</option>
-          <option value="Management">Management</option>
-          <option value="Quality Assurance">Quality Assurance</option>
           <option value="Finance">Finance</option>
           <option value="Information Technology">Information Technology</option>
+          <option value="Management">Management</option>
+          <option value="Quality Assurance">Quality Assurance</option>
+          <option value="Software Development">Software Development</option>
         </select>
 
         <br />

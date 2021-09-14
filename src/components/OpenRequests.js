@@ -33,15 +33,15 @@ function OpenRequests() {
   };
 
   const handleDelete = (event) =>{
-    console.log('ButtonClicked');
-    event.preventDefault();
-    console.log('Selected Delete',ticketReducer[0].id);
-    let id=ticketReducer[0].id;
+    console.log('ButtonClicked',event);
+    // event.preventDefault();
+    console.log('Selected Delete',ticketReducer.id);
+    // let id=ticketReducer.id;
     
     dispatch({
       //**ADDED */
       type: "DELETE_OPENREQUEST", 
-      payload: id
+      payload: event
         
       
     });
@@ -82,7 +82,7 @@ function OpenRequests() {
               
               <td>
               <button
-              onClick={handleDelete}
+              onClick={(event)=>handleDelete(item.id)}
               className="Btn"
               >Delete</button>
               </td>
