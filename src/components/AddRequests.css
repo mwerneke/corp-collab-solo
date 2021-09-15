@@ -7,9 +7,10 @@
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(133, 129, 129);
   background-image: url("/Users/michaelwerneke/tier1/corp-collab-solo/src/components/best-zendesk-apps.jpeg");
-  background-size:50%;
+  background-size:60%;
   background-repeat: no-repeat;
   box-sizing: border-box;
   
@@ -18,7 +19,8 @@
 
 .frm {
   font-family: "Work Sans", Sans-Serif;
-  font-size: 22px;
+  font-size: 25px;
+  
   
 }
 
@@ -28,7 +30,10 @@
   width: 350px;
 }
 .styling{
+  padding-bottom: 5px;
+  
 }
+
 
 /* text-align: center;
   background-color: rgb(217, 237, 247);

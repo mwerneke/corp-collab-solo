@@ -133,7 +133,7 @@ const Example = () => {
             style={{ width: "100%" }}
             ref={videoRef}
             src={blobUrl}
-            // poster={process.env.PUBLIC_URL + "/poster.png"}
+            // poster={Logo}
             controls
             autoPlay
           />

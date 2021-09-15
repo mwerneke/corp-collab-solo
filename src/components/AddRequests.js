@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import "./AddRequests.css";
 
 
+
 function AddRequests() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -58,10 +59,12 @@ function AddRequests() {
   };
 
   return (
+    <>
     <div className="addRequests">
       <form name="frm" onSubmit={postTicket}>
         <div className="styling">
         <h5>Tutorial Request</h5>
+        <br/>
         <textarea
           rows="3"
           font-size="5px"
@@ -124,7 +127,10 @@ function AddRequests() {
         Return to Home
       </Button>
     </div>
+  
+       </>
   );
+  
 }
 
 export default AddRequests;
