@@ -4,10 +4,10 @@
    
   padding-left: 150px; 
   
-  margin: 50px 120px;
-  padding: 30px 30px;
-  padding-left:50px;
-  width: 200px;
+  margin: 60px 140px;
+  padding: 40px 50px;
+  padding-left:30px;
+  width: 190px;
   
   text-align: center;
 }
@@ -51,11 +51,18 @@
   padding-left: 200px;
 } */
 .home__body{
-  /* width:50%; */
+  padding-top: 45px;
+  /* box-sizing: border-box;
+  border: 1px solid #ccc;
+  text-align: center;
+  display:flex; */
+  
 }
 .home__Image{
+  /* display:flex; */
+  /* padding:5px; */
   
-  box-sizing: border-box;
+  
   
  /* width: 200px; */
   

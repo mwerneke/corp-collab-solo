@@ -7,6 +7,17 @@
 .container{
   padding-right: 200px;
 }
+.question{
+  text-align: left;
+  
+  
+  
+}
+.department{
+  padding-top: 10px;
+  text-align: left;
+  color:lightslategrey
+}
 
 .title {
   display: flex;
@@ -21,6 +32,7 @@ div#container {
   max-width: 800px;
   flex: 0.8;
   /* margin: 0 auto; */
+  padding-right: 310px;
   padding: auto;
   margin: auto;
   text-align: center;
