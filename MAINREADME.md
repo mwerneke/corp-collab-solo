@@ -1,10 +1,9 @@
  
- 
-                                        * Corp|Collab Software *
+* Corp|Collab Software *
 
 DEMO Log in : ADMIN unicorn123 - 
 
-* Admin priviliges include deleting questions against corporate policy and the same goes with videos submitted and are available for employee access
+* Admin priviliges include deleting questions against corporate policy and the same goes with videos submitted in which have been made available for employee access
 
 Commands to run program:
 * npm install
@@ -13,40 +12,40 @@ Commands to run program:
 
 See Dependecy list following Overview and Page Descriptions
 
+- Overview
 
+This program is designed for a user to register and make video tutorial requests similar to traditional help tickets. Other collaborators in the network are able to fulfill these requests and publish to the corporate library.
 
-This program is designed for a user to register and make video tutorial requests similar to traditional help tickets. Other collaborators are able to fulfill these requests and publish to the corporate library.
-
-- Authentication: The plugin used is Passport
+- Authentication: The plugin used is: Passport
 
 - Home Page
 
     Allows user to click on "Make a Video Request Button" where they are re-directed to
-    Add Requests page.
+    Add Requests page. This is the initialization process of creating a request
 
 - Add Requests
 
     There are 3 input fields set-up to gather data pertaining to the Users request
-    There's an option to Create Ticket which will indeed push the ticket to DB and Open Requests Page
+    There's an option to Create Ticket which will indeed push the ticket to DB and then redirect to Open Requests Page
     The Return to Home button re-directs to the Home Page
 
 - Open Request
 
     This page consists of table data gathered from the DB and it is rendered here. 
-    There's an option that allows User to Select and Create a Video recording of the request
-    -Upon choosing Select user is directed to the Video recording component
+    There's an option that allows a User to 'Select' and Create a Video recording of the request
+    -Upon choosing 'Select' the user is directed to the Video recording component
     
-- Video Recording component is not accessible unless a request has selected/chosen for fulfillment
+- Video Recording component is not accessible unless a request has been selected/chosen for fulfillment
 
     This component consists of a Start Recording Button, when selected a User will choose which Screen or Window they 
-    would like to record
-    They have an option to Pause recording and stop recording
+    would like to record.
+    You have an option to Pause recording and Stop recording
     Once stopped you may choose one of the following (Reset Recording, Download, and Upload)
         - Reset Recording: Resets the Record
         - Download: Will download the file in the browser
-        - Upload: Submits and publishes the video to the library, this also triggers the open request as fulfilled 
-          and will remove it from open requests.
-    User will be redirected to the library that will include all fulfilled videos
+        - Upload: Submits and publishes the video to the library, this also triggers the Open Request page to refresh the list, deeming the question as fulfilled 
+          
+    Once Upload has been selected, the User will be redirected to the library that will include all fulfilled videos
 
 - Library
 

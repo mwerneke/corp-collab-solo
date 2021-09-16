@@ -10,21 +10,19 @@
   font-size: 25px;
   color: rgb(133, 129, 129);
   background-image: url("/Users/michaelwerneke/tier1/corp-collab-solo/src/components/Background4.jpeg");
- 
-  background-size:90%;
-  background-position:left,bottom;
+
+  background-size: 90%;
+  background-position: left, bottom;
 
   background-repeat: no-repeat;
   box-sizing: border-box;
-  
+
   text-align: center;
 }
 
 .frm {
   font-family: "Work Sans", Sans-Serif;
   font-size: 25px;
-  
-  
 }
 
 .question {
@@ -32,11 +30,9 @@
   font-family: "Work Sans", Sans-Serif;
   width: 350px;
 }
-.styling{
+.styling {
   padding-bottom: 5px;
-  
 }
-
 
 /* text-align: center;
   background-color: rgb(217, 237, 247);

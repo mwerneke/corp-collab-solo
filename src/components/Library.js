@@ -8,7 +8,7 @@ function Library() {
   //fetch to the table get the data map
   const user = useSelector((store) => store.user);
   const videoReducer = useSelector((store) => store.videoReducer);
-  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,23 +17,19 @@ function Library() {
     });
   }, []);
 
-  const handleDelete =(event) =>{
-    console.log('**VIDEO**', videoReducer.key);
-    
+  const handleDelete = (event) => {
+    console.log("**VIDEO**", videoReducer.key);
+
     // let id=videoReducer.key;
 
     dispatch({
       //**ADDED */
-      type: "DELETE_VIDEO", 
-      payload: event
-        
-      
+      type: "DELETE_VIDEO",
+      payload: event,
     });
- 
+  };
 
-  }
-
-let count = videoReducer.length
+  let count = videoReducer.length;
 
   return (
     <div className="library">
@@ -51,28 +47,23 @@ let count = videoReducer.length
                 }
                 title={videoReducer.question}
                 dept={videoReducer.department}
-                button = {user.auth_level === 'ADMIN' ?
-                <>
-                <button
-                onClick={(event) =>handleDelete (videoReducer.key)}
-                className="Btn"
-                >Delete</button>
-                </>
-                :
-                <>
-                </>
+                button={
+                  user.auth_level === "ADMIN" ? (
+                    <>
+                      <button
+                        onClick={(event) => handleDelete(videoReducer.key)}
+                        className="Btn"
+                      >
+                        Delete
+                      </button>
+                    </>
+                  ) : (
+                    <></>
+                  )
                 }
-               
-              
               />
-              
-           
-                      
             );
           })}
-           
-          
-           
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 .container {
   flex: 0.8;
   padding-left: 20px;
-  
 }
 
 #customers {
@@ -17,7 +16,6 @@
 #customers th {
   border: 1px solid #ddd;
   padding: 3px;
-  
 }
 
 #customers tr:nth-child(even) {
@@ -45,7 +43,7 @@
   margin-right: 8px;
   margin-bottom: 3px;
 }
-.opentickets{
+.opentickets {
   margin-bottom: 10 px;
-  color:darkgrey;
+  color: darkgrey;
 }

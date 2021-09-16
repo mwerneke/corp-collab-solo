@@ -11,8 +11,7 @@ import { useHistory } from "react-router-dom";
 const Example = () => {
   const dispatch = useDispatch(); //**Added */
   const ticketDetailReducer = useSelector((store) => store.ticketDetailReducer);
-  
-  
+
   const history = useHistory();
   const {
     startRecording,
@@ -66,27 +65,20 @@ const Example = () => {
 
     dispatch({
       //**ADDED */
-      type: "POST_VIDEO", 
+      type: "POST_VIDEO",
       payload: {
         key,
         question: ticketDetailReducer[0].question,
         department: ticketDetailReducer[0].department,
       },
     });
-    let id=ticketDetailReducer[0].id;
+    let id = ticketDetailReducer[0].id;
     dispatch({
       //**ADDED */
-      type: "DELETE_OPENREQUEST", 
-      payload: id
-        
-      
+      type: "DELETE_OPENREQUEST",
+      payload: id,
     });
-    
 
-
-      
-     
-  
     history.push("/library");
   };
 
@@ -104,7 +96,7 @@ const Example = () => {
           return (
             <tr key={item.id}>
               <div>
-               <h4 className="question">Tutorial Request: {item.question}</h4>
+                <h4 className="question">Tutorial Request: {item.question}</h4>
               </div>
               <div>
                 <h4 className="department">Department: {item.department}</h4>

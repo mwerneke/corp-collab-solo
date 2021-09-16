@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import './LoginForm.css';
-import Logo from '../Logo.png'
+import "./LoginForm.css";
+import Logo from "../Logo.png";
 
 function LoginForm(props) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const errors = useSelector(store => store.errors);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const errors = useSelector((store) => store.errors);
   const history = useHistory();
   const dispatch = useDispatch();
 
@@ -17,14 +17,14 @@ function LoginForm(props) {
 
     if (username && password) {
       dispatch({
-        type: 'LOGIN',
+        type: "LOGIN",
         payload: {
           username: username,
           password: password,
         },
       });
     } else {
-      dispatch({ type: 'LOGIN_INPUT_ERROR' });
+      dispatch({ type: "LOGIN_INPUT_ERROR" });
     }
 
     history.push("/home");
@@ -32,53 +32,52 @@ function LoginForm(props) {
 
   return (
     <>
-    <div className="background">
-      <img
-        className="form__logo"
-        src={Logo} alt="" />
+      <div className="background">
+        <img className="form__logo" src={Logo} alt="" />
 
-      <form className="formPanel" onSubmit={login} >
-
-        <div className="form">
-
-          <h2>Login</h2>
-          {errors.loginMessage && (
-            <h3 className="alert" role="alert">
-              {errors.loginMessage}
-            </h3>
-          )}
-          <div>
-            <label htmlFor="username">
-              Username:
+        <form className="formPanel" onSubmit={login}>
+          <div className="form">
+            <h2>Login</h2>
+            {errors.loginMessage && (
+              <h3 className="alert" role="alert">
+                {errors.loginMessage}
+              </h3>
+            )}
+            <div>
+              <label htmlFor="username">
+                Username:
+                <input
+                  type="text"
+                  name="username"
+                  required
+                  value={username}
+                  onChange={(event) => setUsername(event.target.value)}
+                />
+              </label>
+            </div>
+            <div>
+              <label htmlFor="password">
+                Password:
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </label>
+            </div>
+            <div>
               <input
-                type="text"
-                name="username"
-                required
-                value={username}
-
-                onChange={(event) => setUsername(event.target.value)}
+                className="btn"
+                type="submit"
+                name="submit"
+                value="Log In"
               />
-            </label>
+            </div>
           </div>
-          <div>
-            <label htmlFor="password">
-              Password:
-              <input
-                type="password"
-                name="password"
-                required
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-              />
-            </label>
-          </div>
-          <div>
-            <input className="btn" type="submit" name="submit" value="Log In" />
-          </div>
-        </div>
-      </form>
+        </form>
       </div>
-
     </>
   );
 }

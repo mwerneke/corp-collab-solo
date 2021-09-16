@@ -5,8 +5,6 @@ import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import "./AddRequests.css";
 
-
-
 function AddRequests() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -60,77 +58,77 @@ function AddRequests() {
 
   return (
     <>
-    <div className="addRequests">
-      <form name="frm" onSubmit={postTicket}>
-        <div className="styling">
-        <h5>Tutorial Request</h5>
-        <br/>
-        <textarea
-          rows="3"
-          font-size="5px"
-          className="question"
-          onChange={handleQuestion}
-        />
-        <br />
-        <h5>Department</h5>
-        <select
-          className="deptDropdown"
-          placeholder="Departments"
-          onChange={handleDept}
-        >
-          <option value="0"></option>
-          <option value="Customer Service">Customer Service</option>
-          <option value="Finance">Finance</option>
-          <option value="Information Technology">Information Technology</option>
-          <option value="Management">Management</option>
-          <option value="Quality Assurance">Quality Assurance</option>
-          <option value="Software Development">Software Development</option>
-        </select>
+      <div className="addRequests">
+        <form name="frm" onSubmit={postTicket}>
+          <div className="styling">
+            <h5>Tutorial Request</h5>
+            <br />
+            <textarea
+              rows="3"
+              font-size="5px"
+              className="question"
+              onChange={handleQuestion}
+            />
+            <br />
+            <h5>Department</h5>
+            <select
+              className="deptDropdown"
+              placeholder="Departments"
+              onChange={handleDept}
+            >
+              <option value="0"></option>
+              <option value="Customer Service">Customer Service</option>
+              <option value="Finance">Finance</option>
+              <option value="Information Technology">
+                Information Technology
+              </option>
+              <option value="Management">Management</option>
+              <option value="Quality Assurance">Quality Assurance</option>
+              <option value="Software Development">Software Development</option>
+            </select>
 
-        <br />
-        <h5>Priority</h5>
-        <select
-          className="priorityDropdown"
-          placeholder=""
-          onChange={handlePriority}
-        >
-          <option value="0"></option>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-        <br />
-        {/* <div>
+            <br />
+            <h5>Priority</h5>
+            <select
+              className="priorityDropdown"
+              placeholder=""
+              onChange={handlePriority}
+            >
+              <option value="0"></option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <br />
+            {/* <div>
                 <Button variant="contained" color="primary" className="cancel" onClick={handleCancel} type= "submit">Cancel</Button>
                 </div> */}
-        <br />
-        <br />
+            <br />
+            <br />
 
+            <Button
+              variant="contained"
+              color="primary"
+              className="add"
+              type="submit"
+            >
+              Create Ticket
+            </Button>
+            {/* <button onClick={handleBackBtn}/> */}
+          </div>
+        </form>
+        <br />
         <Button
           variant="contained"
           color="primary"
-          className="add"
-          type="submit"
+          className="return"
+          onClick={handleBackBtn}
         >
-          Create Ticket
+          Return to Home
         </Button>
-        {/* <button onClick={handleBackBtn}/> */}
-        </div>
-      </form>
-      <br />
-      <Button
-        variant="contained"
-        color="primary"
-        className="return"
-        onClick={handleBackBtn}
-      >
-        Return to Home
-      </Button>
-    </div>
-  
-       </>
+      </div>
+    </>
   );
-  
 }
 
 export default AddRequests;

@@ -4,19 +4,16 @@
   margin: 0;
   padding: 0;
 }
-.container{
+.container {
   padding-right: 200px;
 }
-.question{
+.question {
   text-align: left;
-  
-  
-  
 }
-.department{
+.department {
   padding-top: 10px;
   text-align: left;
-  color:lightslategrey
+  color: lightslategrey;
 }
 
 .title {
@@ -67,7 +64,7 @@ nav > img {
   width: 115%;
   margin: 0 auto;
   margin-top: 2em;
-  margin-right:100
+  margin-right: 100;
 }
 
 .pills {
@@ -97,7 +94,7 @@ video {
   /* border-radius: 1em; */
   margin: 1em 0;
   margin-bottom: 2em;
-  
+
   /* box-shadow: rgb(63, 147, 216) 0px 25px 50px -12px; */
 }
 

@@ -5,18 +5,17 @@ function* searchVideo(action) {
   try {
     // console.log('MIKEMIKEMIKE',action);
     // const paramsToPass= {searchWord:action.payload}
-    const response = yield axios.get(`/api/search/${action.payload}`)
+    const response = yield axios.get(`/api/search/${action.payload}`);
     // {
     //   searchWord: action.payload,
     // });
-    
+
     //    params: {searchWord: action.payload}
-    
+
     yield put({
       type: "SEARCH_VIDEO",
       payload: response.data,
     });
-    
   } catch (error) {
     console.log("searchVideo error", error);
   }

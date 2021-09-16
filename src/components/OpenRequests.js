@@ -32,27 +32,24 @@ function OpenRequests() {
     history.push("/addtolibrary");
   };
 
-  const handleDelete = (event) =>{
-    console.log('ButtonClicked',event);
+  const handleDelete = (event) => {
+    console.log("ButtonClicked", event);
     // event.preventDefault();
-    console.log('Selected Delete',ticketReducer.id);
+    console.log("Selected Delete", ticketReducer.id);
     // let id=ticketReducer.id;
-    
+
     dispatch({
       //**ADDED */
-      type: "DELETE_OPENREQUEST", 
-      payload: event
-        
-      
+      type: "DELETE_OPENREQUEST",
+      payload: event,
     });
-
-  }
+  };
 
   return (
     <>
       <div className="container">
         <div className="opentickets">
-        <h1>Open Tickets</h1>
+          <h1>Open Tickets</h1>
         </div>
         <table id="customers">
           <tr>
@@ -69,7 +66,7 @@ function OpenRequests() {
                   <td>{item.question}</td>
                   <td>{item.department}</td>
                   <td>{item.priority}</td>
-               
+
                   <td>
                     <button
                       onClick={(event) => seeTicket(item.id)}
@@ -80,20 +77,20 @@ function OpenRequests() {
                       Select
                     </button>
                   </td>
-                  {user.auth_level === 'ADMIN' ?
-              <>
-              
-              <td>
-              <button
-              onClick={(event)=>handleDelete(item.id)}
-              className="Btn"
-              >Delete</button>
-              </td>
-              </>
-              :
-              <>
-              </>
-              }
+                  {user.auth_level === "ADMIN" ? (
+                    <>
+                      <td>
+                        <button
+                          onClick={(event) => handleDelete(item.id)}
+                          className="Btn"
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </tr>
               );
             })}

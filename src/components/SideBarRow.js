@@ -1,7 +1,6 @@
 import React from "react";
 import "./SideBarRow.css";
 
-
 function SideBarRow({ selected, Icon, title, link }) {
   return (
     <div className={`sidebarRow ${selected && "selected"}`}>
