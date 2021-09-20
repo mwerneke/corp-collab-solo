@@ -21,8 +21,8 @@ function VideoCard({ dept, title, video, button }) {
       />
 
       <br />
-      <p>{title}</p>
-      <p>Dept: {dept}</p>
+      <p className="videoTitle">{title}</p>
+      <p className="deptTitle">Dept: {dept}</p>
       <button className="Btn">{button}</button>
 
 

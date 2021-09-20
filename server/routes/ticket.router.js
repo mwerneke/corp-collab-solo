@@ -36,7 +36,7 @@ router.post("/", rejectUnauthenticated, (req, res) => {
 router.get("/", rejectUnauthenticated, (req, res) => {
   console.log("Ticket Info GET");
 
-  const sqlQuery = `SELECT "id","question","department","priority" FROM "question_table";`;
+  const sqlQuery = `SELECT "id","question","department","priority" FROM "question_table" ORDER BY department ASC;`;
 
   // console.log('Log for sql Params', sqlParams);
 
