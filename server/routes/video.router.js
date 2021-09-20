@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
   console.log(req.body, "POST LOG ");
   // RETURNING "id" will give us back the id of the created video
   const insertVideoQuery = `
-    INSERT INTO "solo" ("key", "question", "department")
+    INSERT INTO "solo" ("key", "question", "department") 
     VALUES ($1, $2, $3);`;
   // RETURNING "id";`
   // Makes Video
@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
 router.get("/", (req, res) => {
   console.log("video Details GET");
 
-  const query = `SELECT "key", "question", "department" FROM "solo";`;
+  const query = `SELECT "key", "question", "department" FROM "solo" ORDER BY question ASC;`;
   // const sqlParams=[req.params.id]
 
   pool
