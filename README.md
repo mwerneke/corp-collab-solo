@@ -86,14 +86,7 @@ This program is designed for a user to register and make video tutorial requests
     "use-screen-recorder": "^1.0.1"
   },
 
+Test
 
 
-                 _
-               *| |      ][\/][ E r s e n n e
-                | |* _
-             _  | |_| |
-           *| |_|  ___|
-            |___   |
-               *|  |
-                |  |*
-                |  |
+ 

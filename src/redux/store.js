@@ -26,5 +26,6 @@ const store = createStore(
 // tells the saga middleware to use the rootSaga
 // rootSaga contains all of our other sagas
 sagaMiddleware.run(rootSaga);
+//test
 
 export default store;
